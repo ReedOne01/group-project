@@ -26,7 +26,8 @@ ul li{
 }
 nav ul li a{
     text-decoration: none;
-    text-emphasis-style: none;
+    font-size: 15px;
+    color: gray ;
 
 }
 nav ul li button{
@@ -35,7 +36,12 @@ nav ul li button{
     height: 30px;
     border-radius: 10px;
     color: white;
-    background-color: rgba(32, 136, 136, 0.603);
+    background-color: #216378;
+}
+#butt{
+    background-color: white;
+    color:#216378;
+    border: 1px solid #216378;
 }
 .content{
     display: block;
@@ -47,7 +53,7 @@ nav ul li button{
 }
 .text_1 h1{
     font-size: 3em;
-    color: rgba(32, 136, 136, 0.603);
+    color: #216378;
     margin-top: 40px;
 }
 .text_1 p{
@@ -62,7 +68,7 @@ nav ul li button{
     margin: 50px 0;
     padding: 10px;
     color: white;
-    background-color:rgba(32, 136, 136, 0.603) ;
+    background-color:#216378 ;
     border-radius: 5px;
     align-items: center;
     text-align: center;
@@ -117,10 +123,10 @@ nav ul li button{
 .envelop>div>p{
 font-size: 1.5rem;
 margin: 30px 0px;
-color:rgba(32, 136, 136, 0.603);
+color:#216378;
 }
 .plans{
-    color: rgba(32, 136, 136, 0.603);
+    color:#216378;
     font-size: 30px;
     margin: 10px 0;
 }
@@ -144,12 +150,12 @@ color:rgba(32, 136, 136, 0.603);
     width: 20%;
     margin: 20px 0;
     font-size: 1.3em;
-    border: 2px solid green;
+    border: 2px solid #216378;
     background-color: white;
-    color:  rgba(32, 136, 136, 0.603);
+    color: #216378;
 }
 .mont:nth-child(1){
-    background-color:  rgba(32, 136, 136, 0.603);
+    background-color: #216378;
     color: white;
 }
 .packages{
@@ -168,22 +174,22 @@ color:rgba(32, 136, 136, 0.603);
     height: auto;
     margin: 10px 0;
     /* padding: 20px 0; */
-    border: 2px solid rgb(3, 66, 66);
+    border: 2px solid #216378;
     text-align: center;
 }
 .pack>p:nth-child(1){
     font-size: 25px;
-    color:rgba(12, 150, 150, 0.973) ;
+    color:#216378 ;
     padding: 20px;
 }
 .pack>p:nth-child(3){
-    color: lightgreen;
+    color: #216378;
     
 }
 .pack>p span{
     font-weight: 700;
     font-size: 25px;
-    color: green;
+    color: #216378;
     
 }
 .pack>p{
@@ -204,11 +210,11 @@ color:rgba(32, 136, 136, 0.603);
     height: 40px;
     width: 45%;
 
-    background-color: green;
+    background-color: #216378;
     color: white;
 }
 footer{
-    background-color: rgba(18, 77, 68, 0.952);
+    background-color: #216378;
     padding: 10px;
 }
 .foot{
@@ -254,4 +260,122 @@ footer{
     background: none;
     height: 40px;
     /* width: 50px; */
+}
+@media (max-width: 940px) {
+    nav{
+        padding: 0 2rem;
+    }
+    nav ul{
+        padding: 0 10px;
+    }
+    nav ul li{
+        margin-left: 20px;
+    }
+}
+@media (max-width:803px){
+    nav div img{
+        height: 40px;
+        width: 90px;
+        padding: 4px 0;
+       
+    }
+    nav ul li{
+        margin-left: 10px;
+    }
+}
+@media (max-width:705px){
+    nav ul{
+        display: grid;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left:0%;
+        z-index: 1; 
+        transform: translateY(-150%);
+        background-color: lightseagreen; 
+        transition: .6s;
+
+    }
+    nav ul li{
+        margin-bottom: 4px;
+        padding: 8px;
+        font-size: 24px;
+    }
+    nav ul li a{
+
+        color: white;
+    }
+    nav ul li button{
+        height: auto;
+        font-size: 15px;
+    }
+    .navbar{
+        display: grid !important;
+    }
+    .monthly{
+        margin-top: 10em;
+    }
+}
+@media(max-width:514px){
+    #pic{
+        width: 350px;
+    }
+    .flex-card{
+        height: 40%;
+        width: 10rem;
+    }
+    .flex-card img{
+        height: 25px;
+        margin-top: 1em;
+    }
+    .pack>p:nth-child(1){
+        font-size: 20px;
+    }
+    .mont{
+        width: 25%;
+    }
+}
+@media (max-width:375px){
+    .monthly{
+        margin-top: 3em;
+    }
+    .pack{
+        padding: auto;
+        /* background-color: green; */
+    }
+    .pack>p:nth-child(1){
+        font-size: 18px;
+    }
+    .pack>p span{
+        font-size: 20px;
+    }
+    .pack ul li{
+        padding:auto;
+        margin: 7px 0;
+        font-size: 11px;
+
+    }
+}
+.navbar{
+    display:none;
+    height: min-content;
+    justify-content: center;
+    align-items: center;
+    /* background-color: bisque; */
+    margin-top: 15px;
+}
+.bar{
+    width: 50px;
+    height: 5px;
+    margin: 0px 3px 7px 0px;
+    background-color: lightseagreen;
+    cursor: pointer;
+    border-radius: 10%;
+    transition: .4s;
+}
+input{
+    display: none;
+}
+input:checked ~ nav ul{
+    transform: translateY(0);
 }
